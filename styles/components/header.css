@@ -1,4 +1,8 @@
 header {
   background-color: #4caf50;
-  height: 70px;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

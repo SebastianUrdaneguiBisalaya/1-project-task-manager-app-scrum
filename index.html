@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -23,10 +23,25 @@
   </head>
   <body>
     <header>
-      <h1>Administrador de tareas</h1>
+      <div class="header__nav">
+        <h1>Administrador de tareas</h1>
+      </div>
     </header>
     <main>
-      <div style="height: 1500px; background-color: red; margin: 30px"></div>
+      <div class="table__states">
+        <div class="table__state">
+          <div class="table__stateTitle">To Do<span class="table__stateNumber">4</span></div>
+          <div class="table__stateContainer">Description</div>
+        </div>
+        <div class="table__state">
+          <div class="table__stateTitle">In Process<span class="table__stateNumber">2</span></div>
+          <div class="table__stateContainer">Description</div>
+        </div>
+        <div class="table__state">
+          <div class="table__stateTitle">Done<span class="table__stateNumber">1</span></div>
+          <div class="table__stateContainer">Description</div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
