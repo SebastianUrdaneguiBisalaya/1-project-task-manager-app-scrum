@@ -7,11 +7,15 @@
   /* Font Size  */
   --font-size-title-status: 0.95rem;
   --font-size-number-length-status: 0.9rem;
+  --font-size-icon-add: 2.5rem;
+  --font-size-category: 0.9rem;
 
   /* Colors */
   --color-black: #000;
+  --color-white: #fff;
   --color-gray: #e5e9ec;
-  --color-gray-less-ligth: #a8a8a8
+  --color-gray-less-ligth: #a8a8a8;
+  --color-blue-dark: #0f1d40;
 }
 
 *,

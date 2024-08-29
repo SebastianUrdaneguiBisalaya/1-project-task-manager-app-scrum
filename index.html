@@ -24,24 +24,69 @@
   <body>
     <header>
       <div class="header__nav">
-        <h1>Administrador de tareas</h1>
+        <div class="header__title">
+          <img
+            class="header__icon"
+            src="./assets/img/favicon.ico"
+            alt=""
+          />
+          <h1>Administrador de Tareas</h1>
+        </div>
+        <div class="header__filterOptions">
+          <button
+            type="button"
+            class="header__filterOption"
+          >
+            Personal
+          </button>
+          <button
+            type="button"
+            class="header__filterOption"
+          >
+            Estudios
+          </button>
+          <button
+            type="button"
+            class="header__filterOption"
+          >
+            Trabajo
+          </button>
+          <button
+            type="button"
+            class="header__filterOption"
+          >
+            Deportes
+          </button>
+          <button
+            type="button"
+            class="header__filterOption"
+          >
+            Otros
+          </button>
+        </div>
       </div>
     </header>
     <main>
       <div class="table__states">
         <div class="table__state">
           <div class="table__stateTitle">To Do<span class="table__stateNumber">4</span></div>
-          <div class="table__stateContainer">Description</div>
+          <div class="table__stateContainer">Card Description</div>
         </div>
         <div class="table__state">
           <div class="table__stateTitle">In Process<span class="table__stateNumber">2</span></div>
-          <div class="table__stateContainer">Description</div>
+          <div class="table__stateContainer">Card Description</div>
         </div>
         <div class="table__state">
           <div class="table__stateTitle">Done<span class="table__stateNumber">1</span></div>
-          <div class="table__stateContainer">Description</div>
+          <div class="table__stateContainer">Card Description</div>
         </div>
       </div>
     </main>
+    <button
+      type="button"
+      class="button__add"
+    >
+      +
+    </button>
   </body>
 </html>

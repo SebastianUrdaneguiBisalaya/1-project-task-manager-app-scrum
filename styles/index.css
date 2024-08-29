@@ -4,18 +4,54 @@
 
 .header__nav {
   max-width: var(--max-width-screen);
-  width: 100%;
-  justify-content: center;
+  width: calc(100% - 2rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  background-color: red;
   margin-right: 0.625rem;
+  border-radius: 1rem;
+}
+
+.header__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__icon {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.5rem;
+}
+
+.header__filterOption {
+  margin: 0 0.5rem;
+  font-size: var(--font-size-category);
+  background-color: var(--color-blue-dark);
+  color: var(--color-white);
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 2s ease;
+  border: 0.1rem solid var(--color-gray);
+  width: 5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.header__filterOption:hover {
+  transform: scale(1.1);
 }
 
 .table__states {
   height: 100vh;
   margin: 2rem auto;
-
   max-width: var(--max-width-screen);
   width: calc(100% - 2rem);
   display: grid;
@@ -66,4 +102,50 @@
   align-items: flex-start;
   padding: 2rem 1rem;
   border-left: 0.1rem solid var(--color-gray);
+}
+
+.button__add {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--color-blue-dark);
+  border: 1px solid var(--color-blue-dark);
+  color: var(--color-white);
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  font-size: var(--font-size-icon-add);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.button__add:hover {
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 920px) {
+  .table__states {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table__state {
+    display: block;
+    border-bottom: 0.1rem solid var(--color-gray);
+  }
+
+  .table__stateTitle {
+    border-bottom: none;
+    border-top: 0.1rem solid var(--color-gray);
+  }
+
+  .table__stateContainer {
+    border-left: none;
+    padding: 1rem; /* Ajusta el padding según lo necesites */
+  }
 }
