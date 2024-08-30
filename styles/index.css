@@ -1,6 +1,7 @@
 @import url(normalize.css);
 @import url(global.css);
 @import url(components/header.css);
+@import url(components/card.css);
 
 .header__nav {
   max-width: var(--max-width-screen);
@@ -30,14 +31,14 @@
 .header__filterOption {
   margin: 0 0.5rem;
   font-size: var(--font-size-category);
-  background-color: var(--color-blue-dark);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-black);
   font-weight: 500;
-  padding: 0.5rem;
+  padding: 0.7rem;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: transform 2s ease;
-  border: 0.1rem solid var(--color-gray);
+  border: 0.1rem solid var(--color-green-dark);
   width: 5rem;
   align-items: center;
   justify-content: center;
@@ -100,7 +101,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 2rem 1rem;
+  padding: 1rem;
   border-left: 0.1rem solid var(--color-gray);
 }
 
@@ -108,8 +109,8 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background-color: var(--color-blue-dark);
-  border: 1px solid var(--color-blue-dark);
+  background-color: var(--color-green-dark);
+  border: 1px solid var(--color-green-dark);
   color: var(--color-white);
   border-radius: 50%;
   width: 3.5rem;
