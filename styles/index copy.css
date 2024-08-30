@@ -28,16 +28,6 @@
   margin-right: 0.5rem;
 }
 
-.header__filterOptions {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  row-gap: 0.4rem;
-  justify-content: center;
-  align-items: center;
-  padding: 0.8rem 0;
-}
-
 .header__filterOption {
   margin: 0 0.5rem;
   font-size: var(--font-size-category);
@@ -60,37 +50,43 @@
   transform: scale(1.1);
 }
 
-.table__state {
-  display: none;
-}
-
-.table__state.active {
+.filterOptions__visibility {
   display: block;
 }
 
-.tabs {
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 0.1rem solid var(--color-gray);
+.tabs__remove {
+  display: none;
 }
 
-.tab {
+.table__states {
+  height: 100vh;
+  margin: 2rem auto;
+  max-width: var(--max-width-screen);
+  width: calc(100% - 2rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.table__state {
+  display: flex;
+  flex-direction: column;
+}
+
+.table__state:nth-child(4) .table__stateContainer {
+  border-right: 0.1rem solid var(--color-gray);
+}
+
+.table__stateTitle {
   height: 5%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 0.1rem solid var(--color-gray);
+  border-top: 0.1rem solid var(--color-gray);
   font-size: var(--font-size-title-status);
   font-weight: 500;
-  cursor: pointer;
-}
-
-.tab.active {
-  border-bottom: 0.2rem solid var(--color-green-dark);
-}
-
-.table__stateTitle {
-  display: none;
 }
 
 .table__stateNumber {
@@ -113,6 +109,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  padding: 1rem;
   border-left: 0.1rem solid var(--color-gray);
 }
 
@@ -139,49 +136,36 @@
   transform: scale(1.1);
 }
 
-@media (max-width: 340px) {
-  .table__stateNumber {
+
+@media (max-width: 920px) {
+  .filterOptions__visibility {
     display: none;
+  }
+  .tabs__remove {
+    display: block;
+  }
+  .table__states {
+    display: block;
+  }
+  .table__state {
+    display: none;
+  }
+  .table__state.active {
+    display: block;
+  }
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 0.1rem solid var(--color-gray);
   }
   .tab {
-    height: 3rem;
-  }
-}
-
-@media (min-width: 920px) {
-  .tabs__remove {
-    display: none;
-  }
-
-  .table__states {
-    height: 100vh;
-    margin: 2rem auto;
-    max-width: var(--max-width-screen);
-    width: calc(100% - 2rem);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    flex: 1;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
     text-align: center;
   }
-  
-  .table__state {
-    display: flex;
-    flex-direction: column;
+  .tab.active {
+    border-bottom: 0.2rem solid var(--color-green-dark);
   }
-
-  .table__state:nth-child(4) .table__stateContainer {
-    border-right: 0.1rem solid var(--color-gray);
-  }
-
-  .table__stateTitle {
-    height: 5%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 0.1rem solid var(--color-gray);
-    border-top: 0.1rem solid var(--color-gray);
-    font-size: var(--font-size-title-status);
-    font-weight: 500;
-  }
-  
 }
