@@ -9,6 +9,8 @@
   --font-size-number-length-status: 0.9rem;
   --font-size-icon-add: 2.5rem;
   --font-size-category: 0.9rem;
+  --font-size-category-add: 0.85rem;
+  --font-size-description: 0.70rem;
   --font-size-icon-to-move: 1.7rem;
 
   /* Colors */
@@ -17,6 +19,10 @@
   --color-gray: #e5e9ec;
   --color-gray-less-ligth: #a8a8a8;
   --color-green-dark: #388c4f;
+  --color-aqua-ligth: #c0f4fc;
+  --color-pink-ligth: #ffc5b9;
+  --color-gray-ligth: #e5e9ec;
+  --color-blue-ligth: #3b6870;
 }
 
 *,
