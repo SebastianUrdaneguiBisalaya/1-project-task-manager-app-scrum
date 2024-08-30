@@ -3,6 +3,10 @@
 @import url(components/header.css);
 @import url(components/card.css);
 
+.visibility {
+  visibility: hidden;
+}
+
 .header__nav {
   max-width: var(--max-width-screen);
   width: calc(100% - 2rem);
@@ -147,6 +151,6 @@
 
   .table__stateContainer {
     border-left: none;
-    padding: 1rem; /* Ajusta el padding según lo necesites */
+    padding: 1rem;
   }
 }

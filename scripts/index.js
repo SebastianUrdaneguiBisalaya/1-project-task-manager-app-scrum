@@ -1,3 +1,6 @@
-import { hello } from './test.js';
+import { visibilityFilterOptions } from './test.js';
 
-hello();
+visibilityFilterOptions();
+
+window.addEventListener('resize', visibilityFilterOptions);
+window.addEventListener('load', visibilityFilterOptions);
