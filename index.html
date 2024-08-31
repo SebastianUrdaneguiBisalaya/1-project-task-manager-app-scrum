@@ -92,71 +92,67 @@
 
         <div class="table__state active">
           <div class="table__stateTitle">To Do<span class="table__stateNumber">4</span></div>
-          <div class="table__stateContainer">
-            <div class="card">
-              <div class="card__title">
-                <h4 class="card__titleMain">Aprender Python, R Studio y Machine Learning</h4>
-                <div class="card__icon">
-                  <span class="card__icon--move">+</span>
-                </div>
-              </div>
-              <div class="card__description">
-                <p class="card__descriptionDetail">Realizar las tareas que dejaron en el curso de Análisis de Datos.</p>
-              </div>
-              <div class="card__moreInfo">
-                <p class="card__moreInfoDetail">Estudio</p>
-                <p class="card__moreInfoDetail">2024-09-02</p>
-              </div>
-            </div>
-          </div>
+          <div class="table__stateContainer table__toDos"></div>
         </div>
         <div class="table__state">
           <div class="table__stateTitle">En Proceso<span class="table__stateNumber">2</span></div>
-          <div class="table__stateContainer">
-            <div class="card">
-              <div class="card__title">
-                <h4 class="card__titleMain">Aprender Python, R Studio y Machine Learning</h4>
-                <div class="card__icon">
-                  <span class="card__icon--move">+</span>
-                </div>
-              </div>
-              <div class="card__description">
-                <p class="card__descriptionDetail">Realizar las tareas que dejaron en el curso de Análisis de Datos.</p>
-              </div>
-              <div class="card__moreInfo">
-                <p class="card__moreInfoDetail">Estudio</p>
-                <p class="card__moreInfoDetail">2024-09-02</p>
-              </div>
-            </div>
-          </div>
+          <div class="table__stateContainer table__inProcess"></div>
         </div>
         <div class="table__state">
           <div class="table__stateTitle">Terminado<span class="table__stateNumber">1</span></div>
-          <div class="table__stateContainer">
-            <div class="card">
-              <div class="card__title">
-                <h4 class="card__titleMain">Aprender Python, R Studio y Machine Learning</h4>
-                <div class="card__icon">
-                  <span class="card__icon--move">+</span>
-                </div>
-              </div>
-              <div class="card__description">
-                <p class="card__descriptionDetail">Realizar las tareas que dejaron en el curso de Análisis de Datos.</p>
-              </div>
-              <div class="card__moreInfo">
-                <p class="card__moreInfoDetail">Estudio</p>
-                <p class="card__moreInfoDetail">2024-09-02</p>
-              </div>
-            </div>
-          </div>
+          <div class="table__stateContainer table__done"></div>
         </div>
       </div>
     </main>
     <button
       type="button"
+      id="id__buttonAdd"
       class="button__add"
     >
       +
     </button>
+    <div
+      id="modal__add"
+      class="modal__addTask"
+    >
+      <div class="modal__addContent">
+        <span
+          id="id__modalClose"
+          class="modal__close"
+          >&times;</span
+        >
+        <p>Hello World</p>
+      </div>
+    </div>
+    <div
+      id="modal__update"
+      class="modal__updateTask"
+    >
+      <div class="modal__updateContent">
+        <span
+          id="id__modalUpdateClose"
+          class="modalUpdate__close"
+          >&times;</span
+        >
+        <p>Update World</p>
+      </div>
+    </div>
+    <template id="template__card">
+      <button class="card">
+        <div class="card__title">
+          <h4 class="card__titleMain"></h4>
+          <div class="card__icon">
+            <span class="card__icon--move">+</span>
+          </div>
+        </div>
+        <div class="card__description">
+          <p class="card__descriptionDetail"></p>
+        </div>
+        <div class="card__moreInfo">
+          <p class="card__moreInfoDetail text__category"></p>
+          <p class="card__moreInfoDetail text__dueDate"></p>
+        </div>
+      </button>
+    </template>
   </body>
 </html>
