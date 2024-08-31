@@ -61,8 +61,15 @@
     flex-wrap: wrap;
     word-break: break-all;
     text-align: left;
-    padding-top: 1rem;
     width: 100%;
+}
+
+.card__status {
+    margin: 0;
+    font-size: var(--font-size-category-add);
+    font-weight: 500;
+    padding-bottom: 0.3rem;
+    color: var(--color-blue-ligth);
 }
 
 .card__descriptionDetail {

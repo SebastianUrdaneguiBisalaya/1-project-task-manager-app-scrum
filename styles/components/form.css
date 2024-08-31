@@ -1,0 +1,46 @@
+.formAdd__input {
+    margin: 0.6rem 0;
+}
+
+.formAdd__input > input, textarea, select {
+    border: 0.1rem solid var(--color-green-dark);
+    width: 100%;
+    margin-top: 0.5rem;
+    border-radius: 0.3rem;
+    min-height: 2rem;
+    padding: 0.5rem;
+}
+
+.formAdd__input > label {
+    font-weight: 500;
+    font-size: var(--font-size-category);
+}
+
+.container__toAddTask, .container__toUpdateTask {
+    width: 100%;
+    text-align: center;
+}
+
+.button__toAddTask, .button__toUpdateTask {
+    padding: 0.7rem 2rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: var(--color-gray-less-ligth);
+    color: var(--color-white);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button__toAddTask:hover, .button__toUpdateTask:hover {
+    background-color: var(--color-green-dark);
+}
+
+@media (min-width: 680px) {
+    .formAdd__input {
+        display: grid;
+        grid-template-columns: 0.3fr 1fr;
+    }
+    .formAdd__input > input, textarea, select {
+        margin-top: 0;
+    }
+}

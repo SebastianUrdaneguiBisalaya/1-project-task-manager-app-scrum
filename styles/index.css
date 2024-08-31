@@ -3,6 +3,7 @@
 @import url(components/header.css);
 @import url(components/card.css);
 @import url(components/modal.css);
+@import url(components/form.css);
 
 .header__nav {
   max-width: var(--max-width-screen);
@@ -55,6 +56,11 @@
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
+}
+
+.header__filterOption.activeFilters {
+  background-color: var(--color-green-dark);
+  color: var(--color-white); 
 }
 
 .header__filterOption:hover {

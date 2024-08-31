@@ -19,6 +19,13 @@
   width: 80%;
 }
 
+.modal__addContentTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .modal__close {
   color: black;
   float: right;
@@ -28,7 +35,7 @@
 
 .modal__close:hover,
 .modal__close:focus {
-  color: black;
+  color: var(--color-red);
   text-decoration: none;
   cursor: pointer;
 }
@@ -53,7 +60,14 @@
     border-radius: 1rem;
     width: 80%;
   }
-  
+
+.modal__updateContentTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .modalUpdate__close {
     color: black;
     float: right;
@@ -63,7 +77,7 @@
   
 .modalUpdate__close:hover,
 .modalUpdate__close:focus {
-  color: black;
+  color: var(--color-red);
   text-decoration: none;
   cursor: pointer;
 }
