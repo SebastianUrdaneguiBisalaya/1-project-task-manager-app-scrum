@@ -141,19 +141,13 @@
   border: 1px solid var(--color-green-dark);
   color: var(--color-white);
   border-radius: 50%;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
   font-size: var(--font-size-icon-add);
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.button__add:hover {
-  transform: scale(1.1);
 }
 
 @media (max-width: 340px) {
@@ -203,6 +197,18 @@
     border-top: 0.1rem solid var(--color-gray);
     font-size: var(--font-size-title-status);
     font-weight: 500;
+  }
+
+  .button__add {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: var(--font-size-icon-add);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .button__add:hover {
+    transform: scale(1.1);
   }
   
 }

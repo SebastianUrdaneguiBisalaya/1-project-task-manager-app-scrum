@@ -8,6 +8,7 @@
   --font-size-title-status: 0.95rem;
   --font-size-number-length-status: 0.9rem;
   --font-size-icon-add: 2.5rem;
+  --font-size-icon-add-min: 1.8rem;
   --font-size-category: 0.9rem;
   --font-size-category-add: 0.85rem;
   --font-size-description: 0.70rem;
@@ -45,6 +46,11 @@ body {
 }
 
 main {
-  overflow-y: auto;
   width: 100%;
+}
+
+@media (min-width: 920px) {
+  main {
+    overflow-y: auto;
+  }
 }
