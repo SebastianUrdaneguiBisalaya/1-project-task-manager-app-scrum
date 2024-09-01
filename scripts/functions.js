@@ -193,7 +193,7 @@ export function moveCardByStatus(cardElement) {
   generateCard(arrayLocalStorage, 'table__toDos', 'To Do');
   generateCard(arrayLocalStorage, 'table__inProcess', 'En Proceso');
   generateCard(arrayLocalStorage, 'table__done', 'Terminado');
-  showPercentage();
+  showPercentage(arrayLocalStorage);
 }
 
 export function updateDataToLocalStorage(textTitle) {
@@ -231,10 +231,10 @@ export function filterDataBase(filters) {
   generateCard(arrayLocalStorage, 'table__toDos', 'To Do');
   generateCard(arrayLocalStorage, 'table__inProcess', 'En Proceso');
   generateCard(arrayLocalStorage, 'table__done', 'Terminado');
+  showPercentage(arrayLocalStorage);
 }
 
-export function showPercentage() {
-  const allToDos = JSON.parse(localStorage.getItem('myArr')) || [];
+export function showPercentage(allToDos) {
   const lengthToDos = allToDos.length;
   const toDosDone = allToDos.filter((item) => item.status === 'Terminado').length;
   const percentage = Number(lengthToDos) === 0 ? 0 : (toDosDone / lengthToDos) * 100;
