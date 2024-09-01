@@ -5,6 +5,7 @@ import {
   initTaskEventsByStatus,
   initFormAddSubmission,
   initFilterOptions,
+  showPercentage,
 } from './functions.js';
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', function () {
   initTaskEventsByStatus();
   initFormAddSubmission();
   initFilterOptions();
+  showPercentage();
 });

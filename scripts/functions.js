@@ -51,8 +51,13 @@ export function initFormAddSubmission() {
       date: document.getElementById('dateAdd').value,
     };
     let arrayLocalStorage = JSON.parse(localStorage.getItem('myArr')) || [];
-    arrayLocalStorage.push(newTask);
-    localStorage.setItem('myArr', JSON.stringify(arrayLocalStorage));
+    const searchIdHistorical = arrayLocalStorage.filter((item) => item.title === newTask.title).length;
+    if (searchIdHistorical === 0) {
+      arrayLocalStorage.push(newTask);
+      localStorage.setItem('myArr', JSON.stringify(arrayLocalStorage));
+    } else {
+      alert('🚀 Recuerda que el título de la tarea no debe duplicarse.');
+    }
     formAdd.reset();
     location.reload();
   });
@@ -188,6 +193,7 @@ export function moveCardByStatus(cardElement) {
   generateCard(arrayLocalStorage, 'table__toDos', 'To Do');
   generateCard(arrayLocalStorage, 'table__inProcess', 'En Proceso');
   generateCard(arrayLocalStorage, 'table__done', 'Terminado');
+  showPercentage();
 }
 
 export function updateDataToLocalStorage(textTitle) {
@@ -225,4 +231,27 @@ export function filterDataBase(filters) {
   generateCard(arrayLocalStorage, 'table__toDos', 'To Do');
   generateCard(arrayLocalStorage, 'table__inProcess', 'En Proceso');
   generateCard(arrayLocalStorage, 'table__done', 'Terminado');
+}
+
+export function showPercentage() {
+  const allToDos = JSON.parse(localStorage.getItem('myArr')) || [];
+  const lengthToDos = allToDos.length;
+  const toDosDone = allToDos.filter((item) => item.status === 'Terminado').length;
+  const percentage = Number(lengthToDos) === 0 ? 0 : (toDosDone / lengthToDos) * 100;
+  const mainPercentage = document.getElementsByClassName('percentage')[0];
+  if (mainPercentage) {
+    mainPercentage.textContent = Math.round(percentage);
+  }
+  const toDos = document.getElementsByClassName('lengthToDo');
+  Array.from(toDos).forEach((item) => {
+    item.textContent = allToDos.filter((item) => item.status === 'To Do').length;
+  });
+  const inProcess = document.getElementsByClassName('lengthInProcess');
+  Array.from(inProcess).forEach((item) => {
+    item.textContent = allToDos.filter((item) => item.status === 'En Proceso').length;
+  });
+  const done = document.getElementsByClassName('lengthDone');
+  Array.from(done).forEach((item) => {
+    item.textContent = allToDos.filter((item) => item.status === 'Terminado').length;
+  });
 }

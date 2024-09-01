@@ -4,6 +4,7 @@
 @import url(components/card.css);
 @import url(components/modal.css);
 @import url(components/form.css);
+@import url(components/progress.css);
 
 .header__nav {
   max-width: var(--max-width-screen);
@@ -122,6 +123,14 @@
   align-items: flex-start;
   border-left: 0.1rem solid var(--color-gray);
   padding: 0 0.5rem;
+}
+
+.table__stateContainer.table__inProcess .card{
+  background-color: var(--color-pink-ligth);
+}
+
+.table__stateContainer.table__done .card {
+  background-color: var(--color-gray-ligth);
 }
 
 .button__add {
