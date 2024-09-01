@@ -11,6 +11,10 @@
     font-size: 1.2rem;
 }
 
+.progress__percentage {
+    text-align: center;
+}
+
 .progress__phrase {
     font-weight: 500;
 }
