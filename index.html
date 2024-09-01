@@ -2,30 +2,53 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Administrador de tareas</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/assets/img/favicon.ico"
-    />
-    <link
-      rel="stylesheet"
-      href="./styles/index.css"
-    />
-    <script
-      type="module"
-      src="./scripts/index.js"
-    ></script>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/components/category-filter.css" />
+    <link rel="stylesheet" href="./styles/components/task-card.css" />
+    <script type="module" src="./scripts/index.js"></script>
   </head>
   <body>
     <header>
       <h1>Administrador de tareas</h1>
     </header>
     <main>
+      <!-- Filtro de categorías -->
+      <div class="filter-container-wrapper">
+        <div class="filter-container">
+          <img src="./assets/img/filter.svg" alt="Filter" class="filter-icon" />
+          <div class="category-filter">
+            <button class="category-btn">Personal</button>
+            <button class="category-btn">Education</button>
+            <button class="category-btn">Work</button>
+            <button class="category-btn">Sports</button>
+            <button class="category-btn">Add category</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sección de tarjetas de tareas -->
+      <div class="task-cards-container">
+        <div class="task-card">
+          <div class="task-card-header">
+            <h3 class="task-title">Task Title</h3>
+            <button class="task-btn task-done-btn">✓</button>
+          </div>
+          <p class="task-description">This is a brief description of the task.</p>
+          <div class="task-meta">
+            <span class="task-category">Category: Work</span>
+            <span class="task-date">Due: 2024-08-31</span>
+          </div>
+          <div class="task-actions">
+            <button class="task-btn task-edit-btn">Edit</button>
+            <button class="task-btn task-delete-btn">Delete</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenido de prueba -->
       <div style="height: 1500px; background-color: red; margin: 30px"></div>
     </main>
   </body>

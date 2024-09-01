@@ -1,0 +1,77 @@
+/* Contenedor principal que engloba todo el filtro */
+.filter-container-wrapper {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el filtro */
+    margin: 20px 0; /* Espacio superior e inferior */
+}
+
+/* Estilos base - Mobile-first approach */
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+}
+
+.filter-icon {
+    width: 24px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.category-btn {
+    flex: 1 1 45%; /* Ocupa un 45% del ancho disponible */
+    margin: 5px;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #2d3748;
+    border: 2px solid #2d3748;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #2d3748;
+    color: #ffffff;
+}
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 768px) {
+    .filter-container {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .filter-icon {
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
+
+    .category-btn {
+        flex: 1 1 18%;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .category-btn {
+        padding: 12px 25px;
+        font-size: 18px;
+    }
+
+    .filter-icon {
+        width: 36px;
+    }
+}
