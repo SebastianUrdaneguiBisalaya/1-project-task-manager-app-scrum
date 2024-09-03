@@ -1,6 +1,9 @@
 # MyTaski 📊 | Project Task Manager App 
 
-> Developed by Sebastian Marat Urdanegui Bisalaya
+- [Interface App - Modelo](https://bordio.com/wp-content/themes/understrap/images/homepage/kanban-xl-1x.webp)
+- [Canvas del modelo base de la app, primer Story Map y Metodología MoSCoW](https://excalidraw.com/#json=a_o5pxBZEDW17JiO49taR,-Xh19twN19IR8KPno0Z50Q)
+- [Primer mockup de la app, adaptado para desktop y mobile](https://design.penpot.app/#/view/a05161ef-ac42-80c0-8004-e2646cfb9150?page-id=a05161ef-ac42-80c0-8004-e2646cfb9151&section=interactions&index=0&share-id=a05161ef-ac42-80c0-8004-e2658f014fbc)
+- [SCRUM del proyecto en Jira](https://sebasurdanegui.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog?selectedIssue=SCRUM-3&atlOrigin=eyJpIjoiNWI1OGMwZDk1NjNmNDczYzgyNGJiODY1MmY1NjIyNjgiLCJwIjoiaiJ9)
 
 ## **Home**
 ![Home](./assets/img/home.png)
@@ -33,3 +36,6 @@ Also, our application is designed to be responsive (mobile first). Therefore, a 
 ![Home](./assets/img/home%20responsive.png)
 
 Thanks for your time! See you later, and take advantage of this application to organize your life! 👋🏻💯
+
+> Designed and developed by Sebastian Marat Urdanegui Bisalaya
+> Create template and code verification Max Antony
