@@ -1,5 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root {
+  /* Width Screen */
+  --max-width-screen: 1200px;
+
+  /* Font Size  */
+  --font-size-title-status: 0.95rem;
+  --font-size-number-length-status: 0.9rem;
+  --font-size-icon-add: 2.5rem;
+  --font-size-icon-add-min: 1.8rem;
+  --font-size-category: 0.9rem;
+  --font-size-category-add: 0.85rem;
+  --font-size-description: 0.70rem;
+  --font-size-icon-to-move: 1.7rem;
+
+  /* Colors */
+  --color-red: #ff0000;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray: #e5e9ec;
+  --color-gray-less-ligth: #a8a8a8;
+  --color-green-dark: #388c4f;
+  --color-aqua-ligth: #c0f4fc;
+  --color-pink-ligth: #ffc5b9;
+  --color-gray-ligth: #e5e9ec;
+  --color-blue-ligth: #3b6870;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
   font-family: 'Roboto', sans-serif;
 }
@@ -13,6 +46,11 @@ body {
 }
 
 main {
-  overflow-y: auto;
-  background-color: #f0f0f0;
+  width: 100%;
+}
+
+@media (min-width: 920px) {
+  main {
+    overflow-y: auto;
+  }
 }

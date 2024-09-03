@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -23,10 +23,270 @@
   </head>
   <body>
     <header>
-      <h1>Administrador de tareas</h1>
+      <div class="header__nav">
+        <div class="header__title">
+          <img
+            class="header__icon"
+            src="./assets/img/favicon.ico"
+            alt="Icon of MiTasky"
+          />
+          <h1>MiTasky</h1>
+        </div>
+        <div class="header__filterOptions">
+          <button
+            type="button"
+            class="header__filterOption"
+          >
+            Personal
+          </button>
+          <button
+            type="button"
+            class="header__filterOption"
+          >
+            Estudios
+          </button>
+          <button
+            type="button"
+            class="header__filterOption"
+          >
+            Trabajo
+          </button>
+          <button
+            type="button"
+            class="header__filterOption"
+          >
+            Deportes
+          </button>
+          <button
+            type="button"
+            class="header__filterOption"
+          >
+            Otros
+          </button>
+        </div>
+      </div>
     </header>
     <main>
-      <div style="height: 1500px; background-color: red; margin: 30px"></div>
+      <div class="main__filterOptions"></div>
+      <div class="main__progress">
+        <h4 class="progress__greating">¡Hola 🤓👨🏻‍💻!</h4>
+        <p class="progress__percentage">
+          Tu avance es del <span class="percentage">58</span>%.
+          <span class="progress__phrase">¡Tú puedes completar las tareas!</span>
+        </p>
+      </div>
+      <div class="table__states">
+        <div class="tabs tabs__remove">
+          <div
+            class="tab active"
+            data_tab="0"
+          >
+            To Do<span class="table__stateNumber lengthToDo">0</span>
+          </div>
+          <div
+            class="tab"
+            data_tab="1"
+          >
+            En Proceso<span class="table__stateNumber lengthInProcess">0</span>
+          </div>
+          <div
+            class="tab"
+            data_tab="2"
+          >
+            Terminado<span class="table__stateNumber lengthDone">0</span>
+          </div>
+        </div>
+
+        <div class="table__state active">
+          <div class="table__stateTitle">To Do<span class="table__stateNumber lengthToDo">0</span></div>
+          <div class="table__stateContainer table__toDos"></div>
+        </div>
+        <div class="table__state">
+          <div class="table__stateTitle">En Proceso<span class="table__stateNumber lengthInProcess">0</span></div>
+          <div class="table__stateContainer table__inProcess"></div>
+        </div>
+        <div class="table__state">
+          <div class="table__stateTitle">Terminado<span class="table__stateNumber lengthDone">0</span></div>
+          <div class="table__stateContainer table__done"></div>
+        </div>
+      </div>
     </main>
+    <button
+      type="button"
+      id="id__buttonAdd"
+      class="button__add"
+    >
+      +
+    </button>
+    <div
+      id="modal__add"
+      class="modal__addTask"
+    >
+      <div class="modal__addContent">
+        <div class="modal__addContentTitle">
+          <h3>Añadir Tarea</h3>
+          <span
+            id="id__modalClose"
+            class="modal__close"
+            >&times;</span
+          >
+        </div>
+        <form
+          id="add-task-form"
+          action="#"
+        >
+          <div class="formAdd__input">
+            <label for="titleAdd">Título</label>
+            <input
+              type="text"
+              id="titleAdd"
+              name="titleAdd"
+              required
+            />
+          </div>
+          <div class="formAdd__input">
+            <label for="descriptionAdd">Descripción</label>
+            <textarea
+              id="descriptionAdd"
+              name="descriptionAdd"
+              rows="2"
+              required
+            ></textarea>
+          </div>
+          <div class="formAdd__input">
+            <label for="dateAdd">Fecha Límite:</label>
+            <input
+              type="date"
+              id="dateAdd"
+              name="dateAdd"
+              required
+            />
+          </div>
+          <div class="formAdd__input">
+            <label for="categoryAdd">Categoría</label>
+            <select
+              name="categoryAdd"
+              id="categoryAdd"
+              required
+            >
+              <option
+                value=""
+                disabled
+                selected
+              >
+                Seleccione una categoría
+              </option>
+              <option value="Personal">Personal</option>
+              <option value="Estudios">Estudios</option>
+              <option value="Trabajo">Trabajo</option>
+              <option value="Deportes">Deportes</option>
+              <option value="Otros">Otros</option>
+            </select>
+          </div>
+          <div class="container__toAddTask">
+            <button
+              type="submit"
+              class="button__toAddTask"
+            >
+              Agregar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div
+      id="modal__update"
+      class="modal__updateTask"
+    >
+      <div class="modal__updateContent"></div>
+    </div>
+    <template id="template__updateTask">
+      <div class="modal__updateContentTitle">
+        <h3>Actualizar Tarea</h3>
+        <span
+          id="id__modalUpdateClose"
+          class="modalUpdate__close"
+          >&times;</span
+        >
+      </div>
+      <form
+        id="update-task-form"
+        action="#"
+      >
+        <div class="formAdd__input">
+          <label for="titleUpdate">Título</label>
+          <input
+            type="text"
+            id="titleUpdate"
+            name="titleUpdate"
+            required
+          />
+        </div>
+        <div class="formAdd__input">
+          <label for="descriptionUpdate">Descripción</label>
+          <textarea
+            id="descriptionUpdate"
+            name="descriptionUpdate"
+            rows="2"
+            required
+          ></textarea>
+        </div>
+        <div class="formAdd__input">
+          <label for="dateUpdate">Fecha Límite:</label>
+          <input
+            type="date"
+            id="dateUpdate"
+            name="dateUpdate"
+            required
+          />
+        </div>
+        <div class="formAdd__input">
+          <label for="categoryUpdate">Categoría</label>
+          <select
+            name="categoryUpdate"
+            id="categoryUpdate"
+            required
+          >
+            <option
+              value=""
+              disabled
+            >
+              Seleccione una categoría
+            </option>
+            <option value="Personal">Personal</option>
+            <option value="Estudios">Estudios</option>
+            <option value="Trabajo">Trabajo</option>
+            <option value="Deportes">Deportes</option>
+            <option value="Otros">Otros</option>
+          </select>
+        </div>
+        <div class="container__toUpdateTask">
+          <button
+            type="submit"
+            class="button__toUpdateTask"
+          >
+            Actualizar
+          </button>
+        </div>
+      </form>
+    </template>
+    <template id="template__card">
+      <button class="card">
+        <div class="card__title">
+          <h4 class="card__titleMain"></h4>
+          <div class="card__icon">
+            <span class="card__icon--move">+</span>
+          </div>
+        </div>
+        <div class="card__description">
+          <p class="card__status"></p>
+          <p class="card__descriptionDetail"></p>
+        </div>
+        <div class="card__moreInfo">
+          <p class="card__moreInfoDetail text__category"></p>
+          <p class="card__moreInfoDetail text__dueDate"></p>
+        </div>
+      </button>
+    </template>
   </body>
 </html>
