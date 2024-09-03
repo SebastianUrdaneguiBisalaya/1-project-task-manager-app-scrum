@@ -119,9 +119,9 @@ export function toggleModal(modalId, buttonId, closeId, cardText = null) {
   updateContent.innerHTML = '';
 
   if (button) {
-    button.onclick = function () {
+    button.addEventListener('click', function () {
       modal.style.display = 'flex';
-    };
+    });
   } else {
     modal.style.display = 'flex';
     if (cardText) {
@@ -135,9 +135,9 @@ export function toggleModal(modalId, buttonId, closeId, cardText = null) {
     updateDataToLocalStorage(cardText?.title);
   }
   const closeButton = document.getElementById(closeId);
-  closeButton.onclick = function () {
+  closeButton.addEventListener('click', function () {
     modal.style.display = 'none';
-  };
+  });
 }
 
 export function generateCard(cardsData, nameContainer, nameStatus) {
