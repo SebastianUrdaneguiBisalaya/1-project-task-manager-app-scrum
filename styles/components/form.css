@@ -14,6 +14,7 @@
 .formAdd__input > label {
     font-weight: 500;
     font-size: var(--font-size-category);
+    color: var(--color-black);
 }
 
 .container__toAddTask, .container__toUpdateTask {
@@ -26,13 +27,17 @@
     border: 0;
     border-radius: 0.5rem;
     background-color: var(--color-gray-less-ligth);
-    color: var(--color-white);
+    color: var(--color-white-static);
     font-weight: 500;
     cursor: pointer;
 }
 
 .button__toAddTask:hover, .button__toUpdateTask:hover {
     background-color: var(--color-green-dark);
+}
+
+h3 {
+    color: var(--color-black);
 }
 
 @media (min-width: 680px) {

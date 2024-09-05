@@ -98,14 +98,15 @@ export function moveFilterOptionsToMain() {
   const mainFilterOptions = document.querySelector('.main__filterOptions');
   const headerFilterOptions = document.querySelector('.header__filterOptions');
   const header = document.querySelector('.header__nav');
+  const headerIconDark = document.querySelector('.header__iconDark');
 
   if (window.innerWidth <= 920) {
     if (headerFilterOptions && !mainFilterOptions.contains(headerFilterOptions)) {
       mainFilterOptions.appendChild(headerFilterOptions);
     }
   } else {
-    if (header && headerFilterOptions && !header.contains(headerFilterOptions)) {
-      header.appendChild(headerFilterOptions);
+    if (header && headerFilterOptions && headerIconDark && !header.contains(headerFilterOptions)) {
+      header.insertBefore(headerFilterOptions, headerIconDark);
     }
   }
 }
@@ -254,4 +255,29 @@ export function showPercentage(allToDos) {
   Array.from(done).forEach((item) => {
     item.textContent = allToDos.filter((item) => item.status === 'Terminado').length;
   });
+}
+
+export function darkMode() {
+  const button = document.getElementsByClassName('header__iconDark')[0];
+  const imgDark = document.querySelector('.header__icon--dark');
+  let dark = JSON.parse(localStorage.getItem('darkMode')) || false;
+  function applyDarkMode() {
+    if (dark) {
+      document.documentElement.style.setProperty('--color-white', '#28282B');
+      document.documentElement.style.setProperty('--color-black', '#fff');
+      imgDark.src = '../assets/img/light-theme.svg';
+    } else {
+      document.documentElement.style.setProperty('--color-white', '#fff');
+      document.documentElement.style.setProperty('--color-black', '#000');
+      imgDark.src = '../assets/img/dark-theme.svg';
+    }
+  }
+  applyDarkMode();
+  if (button) {
+    button.addEventListener('click', function () {
+      dark = !dark;
+      localStorage.setItem('darkMode', JSON.stringify(dark));
+      applyDarkMode();
+    });
+  }
 }

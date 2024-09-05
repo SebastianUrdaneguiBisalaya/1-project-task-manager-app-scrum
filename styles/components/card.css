@@ -31,7 +31,7 @@
 .card__icon {
     display: flex;
     justify-content: center;
-    background-color: var(--color-white);
+    background-color: var(--color-white-static);;
     border-radius: 50%;
     padding: 0.2rem;
     transition: transform 0.5s ease;

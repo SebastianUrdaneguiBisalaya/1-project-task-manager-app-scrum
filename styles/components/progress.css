@@ -9,19 +9,23 @@
     margin: 0;
     margin-top: 1rem;
     font-size: 1.2rem;
+    color: var(--color-black);
 }
 
 .progress__percentage {
     text-align: center;
+    color: var(--color-black);
 }
 
 .progress__phrase {
     font-weight: 500;
+    color: var(--color-black);
 }
 
 .percentage {
     font-weight: 700;
     font-size: 1.2rem;
+    color: var(--color-black);
 }
 
 @media (min-width: 920px) {

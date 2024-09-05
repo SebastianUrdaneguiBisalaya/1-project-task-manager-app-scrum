@@ -17,6 +17,7 @@
   border: 1px solid #888;
   border-radius: 1rem;
   width: 80%;
+  background-color: var(--color-white);
 }
 
 .modal__addContentTitle {
@@ -27,7 +28,7 @@
 }
 
 .modal__close {
-  color: black;
+  color: var(--color-black);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -53,7 +54,7 @@
 }
 
 .modal__updateContent {
-    background-color: #fff;
+    background-color: var(--color-white);
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -69,7 +70,7 @@
 }
 
 .modalUpdate__close {
-    color: black;
+    color: var(--color-black);
     float: right;
     font-size: 28px;
     font-weight: bold;

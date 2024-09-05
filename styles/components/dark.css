@@ -1,0 +1,13 @@
+.header__iconDark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+
+.header__icon--dark {
+    width: 1.3rem;
+    height: 1.3rem;
+}
