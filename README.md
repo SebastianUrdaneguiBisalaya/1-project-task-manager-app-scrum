@@ -8,6 +8,12 @@
 ## **Home**
 ![Home](./assets/img/home.png)
 
+## **Home - Dark Mode**
+MyTaski app has support for dark mode in all sections and functionalities.
+
+![Home Dark Mode](./assets/img/home%20dark%20theme.png)
+
+
 ## **Home - Add Task**
 If you want to add a task, you can click on the green button (at the bottom right of the screen), and this action will open a modal where you can enter your data. For instance, the title (text), description (text), due date (select date), and task category (select box).
 
@@ -33,6 +39,7 @@ In addition, you have a feature to filter tasks and only see tasks that belong t
 ## **Home Responsive**
 
 Also, our application is designed to be responsive (mobile first). Therefore, a breakpoint was added for screens with a width of less than 920px, transforming the grid section into a Tab Top Navigation. Amazing! 🚀
+
 ![Home](./assets/img/home%20responsive.png)
 
 Thanks for your time! See you later, and take advantage of this application to organize your life! 👋🏻💯

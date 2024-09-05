@@ -5,6 +5,7 @@ import {
   initTaskEventsByStatus,
   initFormAddSubmission,
   initFilterOptions,
+  darkMode,
 } from './functions.js';
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', function () {
   initTaskEventsByStatus();
   initFormAddSubmission();
   initFilterOptions();
+  darkMode();
 });
